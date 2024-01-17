@@ -1,0 +1,120 @@
+body {
+    background-image: url("skins/pngwing_1.png");
+    background-color: #CD995C;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    font-family:'Segoe UI';
+    min-height: 100vh;
+}
+
+.navbar-nav .nav-link:hover #image1,
+.navbar-nav .nav-link.active #image1 {
+    content: url(skins/customer_service_1.png);
+    border-color: black;
+}
+
+.navbar-nav .nav-link:hover #image2,
+.navbar-nav .nav-link.active #image2 {
+    content: url(skins/coworking_1.png);
+    border-color: black;
+}
+
+.navbar-nav .nav-link:hover #image3,
+.navbar-nav .nav-link.active #image3 {
+    content: url(skins/menu_1.png);
+    border-color: black;
+}
+
+.navbar-nav .nav-link:hover #image4,
+.navbar-nav .nav-link.active #image4 {
+    content: url(skins/login_2.png);
+    border-color: black;
+}
+
+.title {
+    color: white;
+    font-weight: 700; 
+    word-wrap: break-word;
+    text-align: left;
+    left:5%;
+    position: inherit;
+}
+
+.content {
+    text-align: left; 
+    color: white; 
+    font-size: 20px; 
+    font-weight: 700; 
+    word-wrap: break-word;
+    left:5%;
+    position: inherit;
+}
+
+.contentR {
+    position: relative;
+    text-align: right; 
+    color: white; 
+    font-size: 20px; 
+    font-weight: 700; 
+    word-wrap: break-word;
+}
+
+.Coworking_content {
+    text-align: center; 
+    color: white; 
+    font-size: 23px; 
+    font-weight: 700; 
+    word-wrap: break-word;
+    left:5%;
+    position: inherit;
+}
+
+.titleR {
+    position: relative;
+    color: white;
+    font-weight: 700; 
+    word-wrap: break-word;
+    text-align: right;
+}
+
+.navbar img {
+    width: 60px;
+    height: 50px;
+    margin-right: 10px;
+    border-left: solid white 1px;
+    padding-left: 10px;
+}
+
+.container-fluid {
+    min-height: 100vh;
+    box-sizing: border-box; 
+    padding-top: 106px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white; 
+}
+
+.navbar-dark.bg-dark {
+    background-color: #623500 !important; 
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+    color: black;
+    background-color: white;
+    transition-duration: 300ms;
+}
+
+.navbar-toggler {
+    box-shadow: none;
+}
+
+.navbar-expand-lg .navbar-toggler {
+    box-shadow: none;
+}
