@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+
 body {
     background-image: url("skins/pngwing_1.png");
     background-color: #CD995C;
@@ -7,7 +9,7 @@ body {
     margin-left: 0;
     margin-right: 0;
     width: 100%;
-    font-family:'Segoe UI';
+    font-family:'Jura', 'Segoe UI';
     min-height: 100vh;
 }
 
@@ -111,10 +113,44 @@ body {
     transition-duration: 300ms;
 }
 
+.navbar-nav .nav-link.active, .nav-item .subnav-link.active {
+    text-decoration: underline;
+}
+
 .navbar-toggler {
     box-shadow: none;
 }
 
 .navbar-expand-lg .navbar-toggler {
     box-shadow: none;
+}
+
+.subnav-link {
+    color: white;
+    background-color: #623500;
+    height: 80px;
+    width: 300px;
+    max-width: 300px;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 14px;
+    margin-left:14px;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.nav-item .subnav-link.active, .nav-item .subnav-link:hover {
+    color: black;
+    background-color: white;
+}
+
+.menu-text {
+    text-align: left;
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.nav .nav-item {
+    margin-bottom: 20px;
 }
