@@ -21,7 +21,7 @@ function changeContentKawa() {
         <div class="row">
             <div class="col-md-2" style="margin-bottom:20px; background-color: #8B6642; border-radius: 50px; height: 235px; width: 235px; padding:0;"><img src="skins/americano_1.png" alt="Americano" style="margin: 17.5px;" width="200px" height="200px"></div>
             <div class="col-md-2 menu-text d-flex align-items-center" style="margin-bottom: 20px;">Americano<br />21.37zł</div>
-            <div class="col-md-8" style="height: fit-content; background-color: #8B6642; border-radius: 20px;">
+            <div class="col-md-8" style="height: fit-content; background-color: #8B6642; border-radius: 20px; margin-bottom: 20px;">
                 <div class="row">
                     <div class="col-sm-10 menu-text d-flex align-items-center">
                         Dodatki:
@@ -36,7 +36,7 @@ function changeContentKawa() {
         <div class="row">
             <div class="col-md-2" style="margin-bottom:20px; background-color: #8B6642; border-radius: 50px; height: 235px; width: 235px; padding:0;"><img src="skins/cappuccino_1.png" alt="Cappuccino" style="margin: 17.5px;" width="200px" height="200px"></div>
             <div class="col-md-2 menu-text d-flex align-items-center" style="margin-bottom: 20px;">Cappuccino<br />13.37zł</div>
-            <div class="col-md-8" style="height: fit-content; background-color: #8B6642; border-radius: 20px;">
+            <div class="col-md-8" style="height: fit-content; background-color: #8B6642; border-radius: 20px; margin-bottom: 20px;">
                 <div class="row">
                     <div class="col-sm-10 menu-text d-flex align-items-center">
                         Dodatki:
