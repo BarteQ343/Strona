@@ -28,37 +28,37 @@ function changeContentKawa() {
                             <div class="row">
                                 <div class="col-md-6"> 
                                     <input class="form-check-input" type="checkbox" id="dodatek1A" name="dodatekA1" value=" - Mleko">
-                                    <label for="dodatek1"> mleko</label>
+                                    <label for="dodatek1A"> mleko</label>
                                 </div>
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek2A" name="dodatekA2" value=" - Cukier">
-                                    <label for="dodatek2"> cukier</label>
+                                    <label for="dodatek2A"> cukier</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek3A" name="dodatekA3" value=" - Wanilia">
-                                    <label for="dodatek3"> wanilia</label> 
+                                    <label for="dodatek3A"> wanilia</label> 
                                 </div>
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek4A" name="dodatekA4" value=" - Cynamon">
-                                    <label for="dodatek4"> cynamon</label>
+                                    <label for="dodatek4A"> cynamon</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek5A" name="dodatekA5" value=" - Bita śmietana">
-                                    <label for="dodatek5"> bita śmietana</label>
+                                    <label for="dodatek5A"> bita śmietana</label>
                                 </div>
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek6A" name="dodatekA6" value=" - Lody">
-                                    <label for="dodatek6"> lody</label>
+                                    <label for="dodatek6A"> lody</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek7A" name="dodatekA7" value=" - Owoce leśne">
-                                    <label for="dodatek7"> owoce leśne</label> 
+                                    <label for="dodatek7A"> owoce leśne</label> 
                                 </div>
                             </div>
                         </div>
@@ -78,27 +78,27 @@ function changeContentKawa() {
                             <div class="row">
                                 <div class="col-md-6"> 
                                     <input class="form-check-input" type="checkbox" id="dodatek1C" name="dodatekC1" value=" - Mleko">
-                                    <label for="dodatek1"> cukier</label>
+                                    <label for="dodatek1C"> cukier</label>
                                 </div>
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek2C" name="dodatekC2" value=" - Cukier">
-                                    <label for="dodatek2"> wanilia</label>
+                                    <label for="dodatek2C"> wanilia</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek3C" name="dodatekC3" value=" - Wanilia">
-                                    <label for="dodatek3"> cynamon</label> 
+                                    <label for="dodatek3C"> cynamon</label> 
                                 </div>
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek4C" name="dodatekC4" value=" - Cynamon">
-                                    <label for="dodatek4"> lody</label>
+                                    <label for="dodatek4C"> lody</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek5C" name="dodatekC5" value=" - Bita śmietana">
-                                    <label for="dodatek5"> owoce leśne</label>
+                                    <label for="dodatek5C"> owoce leśne</label>
                                 </div>
                             </div>
                         </div>
