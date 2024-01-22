@@ -191,21 +191,25 @@ function changeContentDoKawy() {
 function changeContentKoszyk() {
     div.innerHTML = `
     <div class="row">
-        <ul class="nav nav-pills flex-column flex-sm-row justify-content-center" style="padding: 0;">
-            <li class="nav-item">
-                <button class="flex-sm-fill text-sm-center nav-link subnav-link" aria-current="page" id="buttonKawa">Kawa</button>
-            </li>
-            <li class="nav-item">
-                <button class="flex-sm-fill text-sm-center nav-link subnav-link" id="buttonDoKawy">Do kawy</button>
-            </li>
-            <li class="nav-item">
-                <button class="flex-sm-fill text-sm-center nav-link subnav-link active" id="buttonKoszyk">Koszyk</button>
-            </li>
-        </ul>
-    </div>
-    <div id="koszykContent" class="row">
-        <!-- Tutaj będzie zawartość koszyka -->
-    </div>`;
+                <ul class="nav nav-pills flex-column flex-sm-row justify-content-center" style="padding: 0;">
+                    <li class="nav-item">
+                        <button class="flex-sm-fill text-sm-center nav-link subnav-link" aria-current="page" id="buttonKawa">Kawa</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="flex-sm-fill text-sm-center nav-link subnav-link" id="buttonDoKawy">Do kawy</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="flex-sm-fill text-sm-center nav-link subnav-link active" id="buttonKoszyk">Koszyk</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 menu-text" style="background-color: #8B6642; border-radius: 20px; min-height: 500px; padding: 10px 12px;" id="koszykContent">
+                    <p>Koszyk jest pusty.</p>
+                </div>
+                <div class="col-md-2"></div>
+            </div>`;
 showCartContent();
 attachEventListeners();
 }
@@ -253,10 +257,13 @@ function addToCart(setName) {
             koszyk.push(wybraneDodatki.join('\n'));
         }
     } else if (kawa == 'dodatekC') {
-        koszyk.push('Cappucino');
-        if (wybraneDodatki.length != 0) {
-            koszyk.push(wybraneDodatki.join('\n'));
-        }
+        if (wybraneDodatki.length == 0) {
+            koszyk.push('Cappucino 13.37 zł');
+        }else if (wybraneDodatki.length != 0) {
+            koszyk.push('Cappuccino');
+            wybraneDodatki.push(' 13.37 zł');
+            koszyk.push(wybraneDodatki.join(' '));
+        } 
     }
     showPopup();
     showCartContent();
