@@ -243,21 +243,29 @@ function addToCart(setName) {
 }
 function addToCartDoKawy(value) {
     koszyk.push(value);
+    showPopup();
 }
 
 function showPopup() {
     var popup = document.getElementById("popup");
-    popup.style.display = "block"; // Make sure the element is displayed before transitioning
+
+    // Clear existing timeout and hide the popup immediately
+    clearTimeout(popup.timeoutId);
+    popup.classList.remove("show");
+
+    // Make sure the element is displayed before transitioning
+    popup.style.display = "block";
+
+    // Set a very short timeout to ensure the transition takes effect
     setTimeout(function() {
         popup.classList.add("show");
-    }, 0); // Set a very short timeout to ensure the transition takes effect
+    }, 0);
 
     // Hide the popup after a few seconds (adjust the timeout as needed)
-    setTimeout(function() {
+    popup.timeoutId = setTimeout(function() {
         popup.classList.remove("show");
     }, 1000); // 2000 milliseconds = 2 seconds
 }
-
 function wyswietlKoszyk() {
     alert(koszyk.join('\n'));
     console.log(koszyk);
