@@ -56,12 +56,47 @@
                 <div class="col-md-2 menu-text d-flex align-items-center" style="margin-bottom: 20px;">Americano<br />21.37zł</div>
                 <div class="col-md-8" style="height: fit-content; background-color: #8B6642; border-radius: 20px; margin-bottom: 20px;">
                     <div class="row">
-                        <div class="col-sm-10 menu-text d-flex align-items-center">
-                            Dodatki:
-                            mleko, cukier, wanilia, cynamon, bita śmietana, lody, owoce leśne
+                        <div class="col-sm-10 menu-text">
+                            <div class="row"><div class="col-md-12">Dodatki:</div></div>
+                            <div class="row">
+                                <div class="col-md-6"> 
+                                    <input type="checkbox" id="dodatek1A" name="dodatekA1" value=" - Mleko">
+                                    <label for="dodatek1"> mleko</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="checkbox" id="dodatek2A" name="dodatekA2" value=" - Cukier">
+                                    <label for="dodatek2"> cukier</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="checkbox" id="dodatek3A" name="dodatekA3" value=" - Wanilia">
+                                    <label for="dodatek3"> wanilia</label> 
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="checkbox" id="dodatek4A" name="dodatekA4" value=" - Cynamon">
+                                    <label for="dodatek4"> cynamon</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="checkbox" id="dodatek5A" name="dodatekA5" value=" - Bita śmietana">
+                                    <label for="dodatek5"> bita śmietana</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="checkbox" id="dodatek6A" name="dodatekA6" value=" - Lody">
+                                    <label for="dodatek6"> lody</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="checkbox" id="dodatek7A" name="dodatekA7" value=" - Owoce leśne">
+                                    <label for="dodatek7"> owoce leśne</label> 
+                                </div>
+                            </div>
                         </div>
                         <div class="col-sm-2">
-                            <img src="skins/shopping_cart.png" style="background-color: white; border-radius: 20px; height:100%;" width="240px" alt="shopping_cart">
+                            <button class="addToCart" id="AmericanoButton" onclick="addToCart('dodatekA')"><img src="skins/shopping_cart.png" style="height:100%;" width="240px" alt="shopping_cart">
                         </div>
                     </div>
                 </div>
@@ -71,17 +106,43 @@
                 <div class="col-md-2 menu-text d-flex align-items-center" style="margin-bottom: 20px;">Cappuccino<br />13.37zł</div>
                 <div class="col-md-8" style="height: fit-content; background-color: #8B6642; border-radius: 20px;  margin-bottom: 20px;">
                     <div class="row">
-                        <div class="col-sm-10 menu-text d-flex align-items-center">
-                            Dodatki:
-                            cukier, wanilia, cynamon, lody, owoce leśne
+                        <div class="col-sm-10 menu-text">
+                            <div class="row"><div class="col-md-12">Dodatki:</div></div>
+                            <div class="row">
+                                <div class="col-md-6"> 
+                                    <input type="checkbox" id="dodatek1C" name="dodatekC1" value=" - Mleko">
+                                    <label for="dodatek1"> cukier</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="checkbox" id="dodatek2C" name="dodatekC2" value=" - Cukier">
+                                    <label for="dodatek2"> wanilia</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="checkbox" id="dodatek3C" name="dodatekC3" value=" - Wanilia">
+                                    <label for="dodatek3"> cynamon</label> 
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="checkbox" id="dodatek4C" name="dodatekC4" value=" - Cynamon">
+                                    <label for="dodatek4"> lody</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="checkbox" id="dodatek5C" name="dodatekC5" value=" - Bita śmietana">
+                                    <label for="dodatek5"> owoce leśne</label>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-sm-2">
-                            <img src="skins/shopping_cart.png" style="background-color: white; border-radius: 20px; height:100%;" width="240px" alt="shopping_cart">
+                            <button class="addToCart" id="CappuccinoButton" onclick="addToCart('dodatekC')"><img src="skins/shopping_cart.png" style="height:100%;" width="240px" alt="shopping_cart">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="popup" id="popup">Dodano do koszyka</div>
         <script src="menu_script.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
