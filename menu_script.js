@@ -190,20 +190,39 @@ function changeContentDoKawy() {
 
 function changeContentKoszyk() {
     div.innerHTML = `
-        <div class="row">
-            <ul class="nav nav-pills flex-column flex-sm-row justify-content-center" style="padding: 0;">
-                <li class="nav-item">
-                    <button class="flex-sm-fill text-sm-center nav-link subnav-link" aria-current="page" id="buttonKawa">Kawa</button>
-                </li>
-                <li class="nav-item">
-                    <button class="flex-sm-fill text-sm-center nav-link subnav-link" id="buttonDoKawy">Do kawy</button>
-                </li>
-                <li class="nav-item">
-                    <button class="flex-sm-fill text-sm-center nav-link subnav-link active" id="buttonKoszyk">Koszyk</button>
-                </li>
-            </ul>
-        </div>`;
-    attachEventListeners();
+    <div class="row">
+        <ul class="nav nav-pills flex-column flex-sm-row justify-content-center" style="padding: 0;">
+            <li class="nav-item">
+                <button class="flex-sm-fill text-sm-center nav-link subnav-link" aria-current="page" id="buttonKawa">Kawa</button>
+            </li>
+            <li class="nav-item">
+                <button class="flex-sm-fill text-sm-center nav-link subnav-link" id="buttonDoKawy">Do kawy</button>
+            </li>
+            <li class="nav-item">
+                <button class="flex-sm-fill text-sm-center nav-link subnav-link active" id="buttonKoszyk">Koszyk</button>
+            </li>
+        </ul>
+    </div>
+    <div id="koszykContent" class="row">
+        <!-- Tutaj będzie zawartość koszyka -->
+    </div>`;
+showCartContent();
+attachEventListeners();
+}
+
+function showCartContent() {
+    const koszykContent = document.getElementById('koszykContent');
+    koszykContent.innerHTML = `<h3>Zawartość koszyka:</h3>`;
+    
+    if (koszyk.length === 0) {
+        koszykContent.innerHTML += `<p>Koszyk jest pusty.</p>`;
+    } else {
+        koszykContent.innerHTML += `<ul>`;
+        koszyk.forEach(item => {
+            koszykContent.innerHTML += `<li>${item}</li>`;
+        });
+        koszykContent.innerHTML += `</ul>`;
+    }
 }
 
 function attachEventListeners() {
@@ -240,10 +259,12 @@ function addToCart(setName) {
         }
     }
     showPopup();
+    showCartContent();
 }
 function addToCartDoKawy(value) {
-    koszyk.push(value);
+    koszyk.push(value + " 3,50Zł ");
     showPopup();
+    showCartContent();
 }
 
 function showPopup() {
