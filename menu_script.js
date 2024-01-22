@@ -180,7 +180,7 @@ function changeContentDoKawy() {
                             Niskokaloryczne i z niską zawartością cukru, i tłuszczu, idealne dla osób na diecie.
                         </div>
                         <div class="col-sm-2">
-                            <button class="addToCart" id="PaczekButton" onclick="addToCartDoKawy('Pączek)"><img src="skins/shopping_cart.png" style="height:100%;" width="240px" alt="shopping_cart">
+                        <button class="addToCart" id="PaczekButton" onclick="addToCartDoKawy('Pączek')"><img src="skins/shopping_cart.png" style="height:100%;" width="240px" alt="shopping_cart">
                         </div>
                     </div>
                 </div>
