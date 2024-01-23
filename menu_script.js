@@ -300,7 +300,7 @@ function removeFromCart(buttonElement) {
 }
 
 function addToCartDoKawy(value) {
-    koszyk.push(value + " 3,50 zł");
+    koszyk.push(value + ` 3,50 zł <button class="btn btn-danger" onclick="removeFromCart(this)">Usuń</button>`);
     ceny.push(3.50);
     showPopup();
 }
