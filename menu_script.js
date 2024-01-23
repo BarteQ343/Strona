@@ -264,17 +264,17 @@ function addToCart(setName) {
     var checkboxes = document.querySelectorAll('input[name^="' + setName + '"]:checked');
     var wybraneDodatki = [];
 
-    checkboxes.forEach(function(checkbox) {
+    checkboxes.forEach(function (checkbox) {
         wybraneDodatki.push(checkbox.value);
         checkbox.checked = false;
     });
-    
+
     if (kawa == 'dodatekA') {
         var americanoOrder = 'Americano';
         if (wybraneDodatki.length != 0) {
             americanoOrder += '<br> ' + wybraneDodatki.join('<br> ');
         }
-        americanoOrder += ' 21.37 zł <button onclick="usunA()">Usuń</button>'; // Add the price to the order
+        americanoOrder += ` 21.37 zł <button onclick="removeFromCart(this)">Usuń</button>`; // Pass the button element
         koszyk.push(americanoOrder);
         ceny.push(21.37);
     } else if (kawa == 'dodatekC') {
@@ -282,19 +282,21 @@ function addToCart(setName) {
         if (wybraneDodatki.length != 0) {
             cappuccinoOrder += '<br> ' + wybraneDodatki.join('<br> ');
         }
-        cappuccinoOrder += ` 13.37 zł <button id="removeC">Usuń</button>`; // Add the price to the order
+        cappuccinoOrder += ` 13.37 zł <button onclick="removeFromCart(this)">Usuń</button>`; // Pass the button element
         koszyk.push(cappuccinoOrder);
         ceny.push(13.37);
     }
     showPopup();
 }
 
-function usunC(Order) {
-    ceny.splice(ceny.indexOf(13.37), 1);
-    console.log(Order);
-    koszyk.splice(koszyk.indexOf(Order), 1);
-    console.log(koszyk);
-    showCartContent();
+function removeFromCart(buttonElement) {
+    var itemContent = buttonElement.parentElement.innerHTML;
+    var index = koszyk.indexOf(itemContent);
+    if (index !== -1) {
+        ceny.splice(index, 1);
+        koszyk.splice(index, 1);
+        showCartContent();
+    }
 }
 
 function addToCartDoKawy(value) {
