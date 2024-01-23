@@ -212,8 +212,8 @@ function changeContentKoszyk() {
             </div>
             <div class="row">
                 <div class="col-md-4"></div>
-                <div class="col-md-7 smaller-box flex-column flex-sm-row d-flex align-items-center d-flex justify-content-center text-uppercase text-white" style="background-color: #623500; border-radius: 10px; min-height: 101px; width: 515px; margin-top: 20px; padding: 10px; font-size: 32px;">
-                    <p>Kupuje i płacę</p>
+                <div class="col-md-8 smaller-box flex-column flex-sm-row d-flex align-items-center justify-content-center text-uppercase menu-text" style="padding: 0; background-color: #623500; border-radius: 10px; min-height: 101px; width: 515px; margin-top: 20px; font-size: 32px;">
+                    <button class="btn menu-text d-flex align-items-center justify-content-center" style="height: 100%; width: 100%;" onclick="funkcja do płatności()">Kupuje i płacę</button>
                 </div>
                 <div class="col-md-4">
             </div>`
@@ -229,9 +229,9 @@ function showCartContent() {
     if (koszyk.length === 0) {
         koszykContent.innerHTML += `<p>Koszyk jest pusty.</p>`;
     } else {
-        koszykContent.innerHTML += `<ul>`;
+        koszykContent.innerHTML += `<ul class="list-group list-group-flush">`;
         koszyk.forEach(item => {
-            koszykContent.innerHTML += `<li>${item}</li>`;
+            koszykContent.innerHTML += `<li class="list-group-item">${item}</li>`;
         });
         koszykContent.innerHTML += `</ul>`;
     }
@@ -248,6 +248,7 @@ function attachEventListeners() {
 }
 
 var koszyk = [];
+var ceny = [];
 
 function addToCart(setName) {
     var kawa = setName;
@@ -262,21 +263,27 @@ function addToCart(setName) {
     if (kawa == 'dodatekA') {
         var americanoOrder = 'Americano';
         if (wybraneDodatki.length != 0) {
-            americanoOrder += '\n- ' + wybraneDodatki.join('\n- ');
+            americanoOrder += '<br> ' + wybraneDodatki.join('<br> ');
         }
-        americanoOrder += '\n21.37 zł'; // Add the price to the order
+        americanoOrder += ' 21.37 zł'; // Add the price to the order
         koszyk.push(americanoOrder);
+        ceny.push(21.37);
     } else if (kawa == 'dodatekC') {
-        if (wybraneDodatki.length == 0) {
-            koszyk.push('Cappucino 13.37 zł');
-        } else if (wybraneDodatki.length != 0) {
-            koszyk.push('Cappuccino');
-            wybraneDodatki.push(' 13.37 zł');
-            koszyk.push(wybraneDodatki.join(' '));
-        } 
+        var cappuccinoOrder = 'Cappuccino';
+        if (wybraneDodatki.length != 0) {
+            cappuccinoOrder += '<br> ' + wybraneDodatki.join('<br> ');
+        }
+        cappuccinoOrder += ' 13.37 zł'; // Add the price to the order
+        koszyk.push(cappuccinoOrder);
+        ceny.push(13.37);
     }
     showPopup();
-    showCartContent();
+}
+
+function addToCartDoKawy(value) {
+    koszyk.push(value + " 3,50Zł ");
+    ceny.push(3.50);
+    showPopup();
 }
 
 function showPopup() {
