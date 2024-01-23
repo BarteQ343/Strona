@@ -222,6 +222,8 @@ showCartContent();
 attachEventListeners();
 }
 
+suma = 0;
+
 function showCartContent() {
     const koszykContent = document.getElementById('koszykContent');
     koszykContent.innerHTML = `<h3>Zawartość koszyka:</h3>`;
@@ -233,6 +235,13 @@ function showCartContent() {
         koszyk.forEach(item => {
             koszykContent.innerHTML += `<li class="list-group-item">${item}</li>`;
         });
+        for (let i = 0; i < ceny.length; i++ ) {
+            suma += ceny[i];
+        }
+        koszykContent.innerHTML += `
+        <hr style="opacity: 1; border: 2px solid white;">
+        Razem: ${suma} zł
+        `;
         koszykContent.innerHTML += `</ul>`;
     }
 }
