@@ -213,7 +213,7 @@ function changeContentKoszyk() {
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-8 smaller-box flex-column flex-sm-row d-flex align-items-center justify-content-center text-uppercase menu-text" style="padding: 0; background-color: #623500; border-radius: 10px; min-height: 101px; width: 515px; margin-top: 20px; font-size: 32px;">
-                    <button class="btn menu-text d-flex align-items-center justify-content-center" style="height: 100%; width: 100%;" onclick="funkcja do płatności()">Kupuję i płacę</button>
+                    <button class="btn menu-text d-flex align-items-center justify-content-center" style="height: 100%; width: 100%;" onclick="kupuj()">Kupuję i płacę</button>
                 </div>
                 <div class="col-md-4">
             </div>`
@@ -319,6 +319,25 @@ function showPopup() {
 function wyswietlKoszyk() {
     alert(koszyk.join('\n'));
     console.log(koszyk);
+}
+function kupuj() {
+    // Add your logic for processing the order and handling payments here
+    // For demonstration purposes, let's use a confirm dialog
+
+    var totalPrice = ceny.reduce((acc, curr) => acc + curr, 0).toFixed(2);
+    var confirmation = confirm("Zamówienie zostało złożone. Do zapłaty: " + totalPrice + " zł. Kliknij 'OK', aby przejść do strony płatności.");
+
+    // Clear the cart after processing the order
+    koszyk = [];
+    ceny = [];
+
+    // Update the cart content display
+    showCartContent();
+
+    // Redirect to kup.html if the user clicked "OK" in the confirm dialog
+    if (confirmation) {
+        window.location.href = "kup.html";
+    }
 }
 
 attachEventListeners();
