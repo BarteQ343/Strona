@@ -274,7 +274,7 @@ function addToCart(setName) {
             if (wybraneDodatki.length != 0) {
                 americanoOrder += '<br> ' + wybraneDodatki.join('<br> ');
             }
-            americanoOrder += ' 21.37 zł <button onclick="usun(this, ' + orderIndex + ')">Usuń</button>'; // Pass button reference and dynamic index to usun function
+            americanoOrder += ' 21.37 zł <button class="removeButton">Usuń</button>'; // Add class to button
             koszyk.push(americanoOrder);
             ceny.push(21.37);
         } else if (kawa == 'dodatekC') {
@@ -282,44 +282,46 @@ function addToCart(setName) {
             if (wybraneDodatki.length != 0) {
                 cappuccinoOrder += '<br> ' + wybraneDodatki.join('<br> ');
             }
-            cappuccinoOrder += ' 13.37 zł <button onclick="usun(this, ' + orderIndex + ')">Usuń</button>'; // Pass button reference and dynamic index to usun function
+            cappuccinoOrder += ' 13.37 zł <button class="removeButton">Usuń</button>'; // Add class to button
             koszyk.push(cappuccinoOrder);
             ceny.push(13.37);
         }
     });
 
     showPopup();
+    updateButtons(); // Update the buttons after adding items
 }
 
-function usun(button, index) {
-    if (index >= 0 && index < koszyk.length) {
-        // Retrieve the value from koszyk based on the index
-        var orderValue = koszyk[index];
+// Use event delegation to handle button clicks
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('removeButton')) {
+        // Find the parent li element
+        var listItem = event.target.closest('li');
 
-        // Remove the item from ceny and koszyk
-        ceny.splice(index, 1);
-        koszyk.splice(index, 1);
+        // Get the index of the parent li element among its siblings
+        var index = Array.from(listItem.parentElement.children).indexOf(listItem);
 
-        // Update the buttons' onclick attribute dynamically
-        updateButtons(index);
+        if (index !== -1) {
+            // Retrieve the value from koszyk based on the index
+            var orderValue = koszyk[index];
 
-        showCartContent(); // Update the "Koszyk" page
-    } else {
-        console.log("Invalid index.");
-    }
-}
+            // Remove the item from ceny and koszyk
+            ceny.splice(index, 1);
+            koszyk.splice(index, 1);
 
-function updateButtons(removedIndex) {
-    // Get all buttons with the onclick attribute containing "usun"
-    var buttons = document.querySelectorAll('[onclick*="usun"]');
+            updateButtons(); // Update the buttons after removing an item
 
-    // Update the index in the onclick attribute for each button
-    buttons.forEach(function(button) {
-        var currentIndex = parseInt(button.getAttribute('onclick').match(/\d+/)[0]); // Extract current index from onclick attribute
-        if (currentIndex > removedIndex) {
-            // Decrease the index for buttons above the removed item
-            button.setAttribute('onclick', button.getAttribute('onclick').replace(currentIndex, currentIndex - 1));
+            showCartContent(); // Update the "Koszyk" page
         }
+    }
+});
+
+function updateButtons() {
+    var removeButtons = document.querySelectorAll('.removeButton');
+
+    removeButtons.forEach(function(button, index) {
+        // Update the button's data-index attribute dynamically
+        button.setAttribute('data-index', index);
     });
 }
 
