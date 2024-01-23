@@ -78,32 +78,182 @@ function changeContentKawa() {
                             <div class="row">
                                 <div class="col-md-6"> 
                                     <input class="form-check-input" type="checkbox" id="dodatek1C" name="dodatekC1" value=" - Mleko">
-                                    <label for="dodatek1C"> cukier</label>
+                                    <label for="dodatek1A"> cukier</label>
                                 </div>
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek2C" name="dodatekC2" value=" - Cukier">
-                                    <label for="dodatek2C"> wanilia</label>
+                                    <label for="dodatek2A"> wanilia</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek3C" name="dodatekC3" value=" - Wanilia">
-                                    <label for="dodatek3C"> cynamon</label> 
+                                    <label for="dodatek3A"> cynamon</label> 
                                 </div>
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek4C" name="dodatekC4" value=" - Cynamon">
-                                    <label for="dodatek4C"> lody</label>
+                                    <label for="dodatek4A"> lody</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek5C" name="dodatekC5" value=" - Bita śmietana">
-                                    <label for="dodatek5C"> owoce leśne</label>
+                                    <label for="dodatek5A"> owoce leśne</label>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-2">
                             <button class="addToCart" id="CappuccinoButton" onclick="addToCart('dodatekC')"><img src="skins/shopping_cart.png" style="height:100%;" width="240px" alt="shopping_cart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2" style="margin-bottom:20px; background-color: #8B6642; border-radius: 50px; height: 235px; width: 235px; padding:0;"><img src="skins/latte.png" alt="Americano" style="margin: 17.5px;" width="200px" height="200px"></div>
+                <div class="col-md-2 menu-text d-flex align-items-center" style="margin-bottom: 20px;">Latte Macchiato<br />25.80zł</div>
+                <div class="col-md-8" style="height: fit-content; background-color: #8B6642; border-radius: 20px; margin-bottom: 20px;">
+                    <div class="row">
+                        <div class="col-sm-10 menu-text">
+                            <div class="row"><div class="col-md-12">Dodatki:</div></div>
+                            <div class="row">
+                                <div class="col-md-6"> 
+                                    <input class="form-check-input" type="checkbox" id="dodatek1A" name="dodatekA1" value=" - Mleko">
+                                    <label for="dodatek1A"> mleko</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek2A" name="dodatekA2" value=" - Cukier">
+                                    <label for="dodatek2A"> cukier</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek3A" name="dodatekA3" value=" - Wanilia">
+                                    <label for="dodatek3A"> wanilia</label> 
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek4A" name="dodatekA4" value=" - Cynamon">
+                                    <label for="dodatek4A"> cynamon</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek5A" name="dodatekA5" value=" - Bita śmietana">
+                                    <label for="dodatek5A"> bita śmietana</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek6A" name="dodatekA6" value=" - Lody">
+                                    <label for="dodatek6A"> lody</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek7A" name="dodatekA7" value=" - Owoce leśne">
+                                    <label for="dodatek7A"> owoce leśne</label> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="addToCart" id="AmericanoButton" onclick="addToCart('dodatekA')"><img src="skins/shopping_cart.png" style="height:100%;" width="240px" alt="shopping_cart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2" style="margin-bottom:20px; background-color: #8B6642; border-radius: 50px; height: 235px; width: 235px; padding:0;"><img src="skins/espresso.png" alt="Americano" style="margin: 17.5px;" width="200px" height="200px"></div>
+                <div class="col-md-2 menu-text d-flex align-items-center" style="margin-bottom: 20px;">Espresso<br />9.11zł</div>
+                <div class="col-md-8" style="height: fit-content; background-color: #8B6642; border-radius: 20px; margin-bottom: 20px;">
+                    <div class="row">
+                        <div class="col-sm-10 menu-text">
+                            <div class="row"><div class="col-md-12">Dodatki:</div></div>
+                            <div class="row">
+                                <div class="col-md-6"> 
+                                    <input class="form-check-input" type="checkbox" id="dodatek1A" name="dodatekA1" value=" - Mleko">
+                                    <label for="dodatek1A"> mleko</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek2A" name="dodatekA2" value=" - Cukier">
+                                    <label for="dodatek2A"> cukier</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek3A" name="dodatekA3" value=" - Wanilia">
+                                    <label for="dodatek3A"> wanilia</label> 
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek4A" name="dodatekA4" value=" - Cynamon">
+                                    <label for="dodatek4A"> cynamon</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek5A" name="dodatekA5" value=" - Bita śmietana">
+                                    <label for="dodatek5A"> bita śmietana</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek6A" name="dodatekA6" value=" - Lody">
+                                    <label for="dodatek6A"> lody</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek7A" name="dodatekA7" value=" - Owoce leśne">
+                                    <label for="dodatek7A"> owoce leśne</label> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="addToCart" id="AmericanoButton" onclick="addToCart('dodatekA')"><img src="skins/shopping_cart.png" style="height:100%;" width="240px" alt="shopping_cart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2" style="margin-bottom:20px; background-color: #8B6642; border-radius: 50px; height: 235px; width: 235px; padding:0;"><img src="skins/Chocolate.png" alt="Americano" style="margin: 17.5px;" width="200px" height="200px"></div>
+                <div class="col-md-2 menu-text d-flex align-items-center" style="margin-bottom: 20px;">Gorąca czekolada<br />9.11zł</div>
+                <div class="col-md-8" style="height: fit-content; background-color: #8B6642; border-radius: 20px; margin-bottom: 20px;">
+                    <div class="row">
+                        <div class="col-sm-10 menu-text">
+                            <div class="row"><div class="col-md-12">Dodatki:</div></div>
+                            <div class="row">
+                                <div class="col-md-6"> 
+                                    <input class="form-check-input" type="checkbox" id="dodatek1A" name="dodatekA1" value=" - Mleko">
+                                    <label for="dodatek1A"> mleko</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek2A" name="dodatekA2" value=" - Cukier">
+                                    <label for="dodatek2A"> cukier</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek3A" name="dodatekA3" value=" - Wanilia">
+                                    <label for="dodatek3A"> wanilia</label> 
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek4A" name="dodatekA4" value=" - Cynamon">
+                                    <label for="dodatek4A"> cynamon</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek5A" name="dodatekA5" value=" - Bita śmietana">
+                                    <label for="dodatek5A"> bita śmietana</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek6A" name="dodatekA6" value=" - Lody">
+                                    <label for="dodatek6A"> lody</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek7A" name="dodatekA7" value=" - Owoce leśne">
+                                    <label for="dodatek7A"> owoce leśne</label> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="addToCart" id="AmericanoButton" onclick="addToCart('dodatekA')"><img src="skins/shopping_cart.png" style="height:100%;" width="240px" alt="shopping_cart">
                         </div>
                     </div>
                 </div>
