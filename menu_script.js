@@ -211,11 +211,11 @@ function changeContentKoszyk() {
                 <div class="col-md-2"></div>
             </div>
             <div class="row">
-                <div class="col-md-4"></div>
+                <div class="col-md-2"></div>
                 <div class="col-md-8 smaller-box flex-column flex-sm-row d-flex align-items-center justify-content-center text-uppercase menu-text" style="padding: 0; background-color: #623500; border-radius: 10px; min-height: 101px; width: 515px; margin-top: 20px; font-size: 32px;">
-                    <button class="btn menu-text d-flex align-items-center justify-content-center" style="height: 100%; width: 100%;" onclick="kupuj()">Kupuję i płacę</button>
+                    <button class="btn pay-btn menu-text d-flex align-items-center justify-content-center" style="height: 100%; width: 100%;" onclick="kupuj()">Kupuję i płacę</button>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-2">
             </div>`
             ;
 showCartContent();
@@ -274,7 +274,7 @@ function addToCart(setName) {
         if (wybraneDodatki.length != 0) {
             americanoOrder += '<br> ' + wybraneDodatki.join('<br> ');
         }
-        americanoOrder += ` 21.37 zł <button onclick="removeFromCart(this)">Usuń</button>`; // Pass the button element
+        americanoOrder += ` 21.37 zł <button class="btn btn-danger" onclick="removeFromCart(this)">Usuń</button>`; // Pass the button element
         koszyk.push(americanoOrder);
         ceny.push(21.37);
     } else if (kawa == 'dodatekC') {
@@ -282,7 +282,7 @@ function addToCart(setName) {
         if (wybraneDodatki.length != 0) {
             cappuccinoOrder += '<br> ' + wybraneDodatki.join('<br> ');
         }
-        cappuccinoOrder += ` 13.37 zł <button onclick="removeFromCart(this)">Usuń</button>`; // Pass the button element
+        cappuccinoOrder += ` 13.37 zł <button class="btn btn-danger" onclick="removeFromCart(this)">Usuń</button>`; // Pass the button element
         koszyk.push(cappuccinoOrder);
         ceny.push(13.37);
     }
