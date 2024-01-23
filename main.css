@@ -153,6 +153,11 @@ body {
     background-color: white;
 }
 
+.btn.pay-btn:hover {
+    color: black;
+    background-color: white;
+}
+
 .menu-text {
     text-align: left;
     color: white;
