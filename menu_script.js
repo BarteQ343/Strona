@@ -264,65 +264,37 @@ function addToCart(setName) {
     var checkboxes = document.querySelectorAll('input[name^="' + setName + '"]:checked');
     var wybraneDodatki = [];
 
-    checkboxes.forEach(function(checkbox, index) {
+    checkboxes.forEach(function(checkbox) {
         wybraneDodatki.push(checkbox.value);
         checkbox.checked = false;
-
-        var orderIndex = koszyk.length + index; // Calculate the current index dynamically
-        if (kawa == 'dodatekA') {
-            var americanoOrder = 'Americano';
-            if (wybraneDodatki.length != 0) {
-                americanoOrder += '<br> ' + wybraneDodatki.join('<br> ');
-            }
-            americanoOrder += ' 21.37 zł <button class="removeButton">Usuń</button>'; // Add class to button
-            koszyk.push(americanoOrder);
-            ceny.push(21.37);
-        } else if (kawa == 'dodatekC') {
-            var cappuccinoOrder = 'Cappuccino';
-            if (wybraneDodatki.length != 0) {
-                cappuccinoOrder += '<br> ' + wybraneDodatki.join('<br> ');
-            }
-            cappuccinoOrder += ' 13.37 zł <button class="removeButton">Usuń</button>'; // Add class to button
-            koszyk.push(cappuccinoOrder);
-            ceny.push(13.37);
-        }
     });
-
+    
+    if (kawa == 'dodatekA') {
+        var americanoOrder = 'Americano';
+        if (wybraneDodatki.length != 0) {
+            americanoOrder += '<br> ' + wybraneDodatki.join('<br> ');
+        }
+        americanoOrder += ' 21.37 zł <button onclick="usunA()">Usuń</button>'; // Add the price to the order
+        koszyk.push(americanoOrder);
+        ceny.push(21.37);
+    } else if (kawa == 'dodatekC') {
+        var cappuccinoOrder = 'Cappuccino';
+        if (wybraneDodatki.length != 0) {
+            cappuccinoOrder += '<br> ' + wybraneDodatki.join('<br> ');
+        }
+        cappuccinoOrder += ` 13.37 zł <button id="removeC">Usuń</button>`; // Add the price to the order
+        koszyk.push(cappuccinoOrder);
+        ceny.push(13.37);
+    }
     showPopup();
-    updateButtons(); // Update the buttons after adding items
 }
 
-// Use event delegation to handle button clicks
-document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('removeButton')) {
-        // Find the parent li element
-        var listItem = event.target.closest('li');
-
-        // Get the index of the parent li element among its siblings
-        var index = Array.from(listItem.parentElement.children).indexOf(listItem);
-
-        if (index !== -1) {
-            // Retrieve the value from koszyk based on the index
-            var orderValue = koszyk[index];
-
-            // Remove the item from ceny and koszyk
-            ceny.splice(index, 1);
-            koszyk.splice(index, 1);
-
-            updateButtons(); // Update the buttons after removing an item
-
-            showCartContent(); // Update the "Koszyk" page
-        }
-    }
-});
-
-function updateButtons() {
-    var removeButtons = document.querySelectorAll('.removeButton');
-
-    removeButtons.forEach(function(button, index) {
-        // Update the button's data-index attribute dynamically
-        button.setAttribute('data-index', index);
-    });
+function usunC(Order) {
+    ceny.splice(ceny.indexOf(13.37), 1);
+    console.log(Order);
+    koszyk.splice(koszyk.indexOf(Order), 1);
+    console.log(koszyk);
+    showCartContent();
 }
 
 function addToCartDoKawy(value) {
