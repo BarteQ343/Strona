@@ -209,7 +209,15 @@ function changeContentKoszyk() {
                     <p>Koszyk jest pusty.</p>
                 </div>
                 <div class="col-md-2"></div>
-            </div>`;
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-7 smaller-box flex-column flex-sm-row d-flex align-items-center d-flex justify-content-center text-uppercase text-white" style="background-color: #623500; border-radius: 10px; min-height: 101px; width: 515px; margin-top: 20px; padding: 10px; font-size: 32px;">
+                    <p>Kupuje i płacę</p>
+                </div>
+                <div class="col-md-4">
+            </div>`
+            ;
 showCartContent();
 attachEventListeners();
 }
@@ -252,24 +260,21 @@ function addToCart(setName) {
     });
     
     if (kawa == 'dodatekA') {
-        koszyk.push('Americano');
+        var americanoOrder = 'Americano';
         if (wybraneDodatki.length != 0) {
-            koszyk.push(wybraneDodatki.join('\n'));
+            americanoOrder += '\n- ' + wybraneDodatki.join('\n- ');
         }
+        americanoOrder += '\n21.37 zł'; // Add the price to the order
+        koszyk.push(americanoOrder);
     } else if (kawa == 'dodatekC') {
         if (wybraneDodatki.length == 0) {
             koszyk.push('Cappucino 13.37 zł');
-        }else if (wybraneDodatki.length != 0) {
+        } else if (wybraneDodatki.length != 0) {
             koszyk.push('Cappuccino');
             wybraneDodatki.push(' 13.37 zł');
             koszyk.push(wybraneDodatki.join(' '));
         } 
     }
-    showPopup();
-    showCartContent();
-}
-function addToCartDoKawy(value) {
-    koszyk.push(value + " 3,50Zł ");
     showPopup();
     showCartContent();
 }
