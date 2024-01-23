@@ -213,7 +213,7 @@ function changeContentKoszyk() {
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-8 smaller-box flex-column flex-sm-row d-flex align-items-center justify-content-center text-uppercase menu-text" style="padding: 0; background-color: #623500; border-radius: 10px; min-height: 101px; width: 515px; margin-top: 20px; font-size: 32px;">
-                    <button class="btn menu-text d-flex align-items-center justify-content-center" style="height: 100%; width: 100%;" onclick="funkcja do płatności()">Kupuje i płacę</button>
+                    <button class="btn menu-text d-flex align-items-center justify-content-center" style="height: 100%; width: 100%;" onclick="funkcja do płatności()">Kupuję i płacę</button>
                 </div>
                 <div class="col-md-4">
             </div>`
@@ -274,7 +274,7 @@ function addToCart(setName) {
         if (wybraneDodatki.length != 0) {
             americanoOrder += '<br> ' + wybraneDodatki.join('<br> ');
         }
-        americanoOrder += ' 21.37 zł'; // Add the price to the order
+        americanoOrder += ' 21.37 zł '; // Add the price to the order
         koszyk.push(americanoOrder);
         ceny.push(21.37);
     } else if (kawa == 'dodatekC') {
@@ -290,7 +290,7 @@ function addToCart(setName) {
 }
 
 function addToCartDoKawy(value) {
-    koszyk.push(value + " 3,50Zł ");
+    koszyk.push(value + " 3,50 zł");
     ceny.push(3.50);
     showPopup();
 }
@@ -315,6 +315,7 @@ function showPopup() {
         popup.classList.remove("show");
     }, 1000); // 2000 milliseconds = 2 seconds
 }
+
 function wyswietlKoszyk() {
     alert(koszyk.join('\n'));
     console.log(koszyk);
