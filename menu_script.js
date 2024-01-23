@@ -222,7 +222,9 @@ showCartContent();
 attachEventListeners();
 }
 
-suma = 0;
+var totalPrice = 0;
+var cappuccinoOrder = '';
+var americanoOrder = '';
 
 function showCartContent() {
     const koszykContent = document.getElementById('koszykContent');
@@ -235,12 +237,10 @@ function showCartContent() {
         koszyk.forEach(item => {
             koszykContent.innerHTML += `<li class="list-group-item">${item}</li>`;
         });
-        for (let i = 0; i < ceny.length; i++ ) {
-            suma += ceny[i];
-        }
+        var totalPrice = ceny.reduce((acc, curr) => acc + curr, 0).toFixed(2);
         koszykContent.innerHTML += `
         <hr style="opacity: 1; border: 2px solid white;">
-        Razem: ${suma} zł
+        Razem: ${totalPrice} zł
         `;
         koszykContent.innerHTML += `</ul>`;
     }
@@ -264,29 +264,63 @@ function addToCart(setName) {
     var checkboxes = document.querySelectorAll('input[name^="' + setName + '"]:checked');
     var wybraneDodatki = [];
 
-    checkboxes.forEach(function(checkbox) {
+    checkboxes.forEach(function(checkbox, index) {
         wybraneDodatki.push(checkbox.value);
         checkbox.checked = false;
+
+        var orderIndex = koszyk.length + index; // Calculate the current index dynamically
+        if (kawa == 'dodatekA') {
+            var americanoOrder = 'Americano';
+            if (wybraneDodatki.length != 0) {
+                americanoOrder += '<br> ' + wybraneDodatki.join('<br> ');
+            }
+            americanoOrder += ' 21.37 zł <button onclick="usun(this, ' + orderIndex + ')">Usuń</button>'; // Pass button reference and dynamic index to usun function
+            koszyk.push(americanoOrder);
+            ceny.push(21.37);
+        } else if (kawa == 'dodatekC') {
+            var cappuccinoOrder = 'Cappuccino';
+            if (wybraneDodatki.length != 0) {
+                cappuccinoOrder += '<br> ' + wybraneDodatki.join('<br> ');
+            }
+            cappuccinoOrder += ' 13.37 zł <button onclick="usun(this, ' + orderIndex + ')">Usuń</button>'; // Pass button reference and dynamic index to usun function
+            koszyk.push(cappuccinoOrder);
+            ceny.push(13.37);
+        }
     });
-    
-    if (kawa == 'dodatekA') {
-        var americanoOrder = 'Americano';
-        if (wybraneDodatki.length != 0) {
-            americanoOrder += '<br> ' + wybraneDodatki.join('<br> ');
-        }
-        americanoOrder += ' 21.37 zł '; // Add the price to the order
-        koszyk.push(americanoOrder);
-        ceny.push(21.37);
-    } else if (kawa == 'dodatekC') {
-        var cappuccinoOrder = 'Cappuccino';
-        if (wybraneDodatki.length != 0) {
-            cappuccinoOrder += '<br> ' + wybraneDodatki.join('<br> ');
-        }
-        cappuccinoOrder += ' 13.37 zł'; // Add the price to the order
-        koszyk.push(cappuccinoOrder);
-        ceny.push(13.37);
-    }
+
     showPopup();
+}
+
+function usun(button, index) {
+    if (index >= 0 && index < koszyk.length) {
+        // Retrieve the value from koszyk based on the index
+        var orderValue = koszyk[index];
+
+        // Remove the item from ceny and koszyk
+        ceny.splice(index, 1);
+        koszyk.splice(index, 1);
+
+        // Update the buttons' onclick attribute dynamically
+        updateButtons(index);
+
+        showCartContent(); // Update the "Koszyk" page
+    } else {
+        console.log("Invalid index.");
+    }
+}
+
+function updateButtons(removedIndex) {
+    // Get all buttons with the onclick attribute containing "usun"
+    var buttons = document.querySelectorAll('[onclick*="usun"]');
+
+    // Update the index in the onclick attribute for each button
+    buttons.forEach(function(button) {
+        var currentIndex = parseInt(button.getAttribute('onclick').match(/\d+/)[0]); // Extract current index from onclick attribute
+        if (currentIndex > removedIndex) {
+            // Decrease the index for buttons above the removed item
+            button.setAttribute('onclick', button.getAttribute('onclick').replace(currentIndex, currentIndex - 1));
+        }
+    });
 }
 
 function addToCartDoKawy(value) {
