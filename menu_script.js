@@ -78,32 +78,136 @@ function changeContentKawa() {
                             <div class="row">
                                 <div class="col-md-6"> 
                                     <input class="form-check-input" type="checkbox" id="dodatek1C" name="dodatekC1" value=" - Mleko">
-                                    <label for="dodatek1C"> cukier</label>
+                                    <label for="dodatek1A"> cukier</label>
                                 </div>
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek2C" name="dodatekC2" value=" - Cukier">
-                                    <label for="dodatek2C"> wanilia</label>
+                                    <label for="dodatek2A"> wanilia</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek3C" name="dodatekC3" value=" - Wanilia">
-                                    <label for="dodatek3C"> cynamon</label> 
+                                    <label for="dodatek3A"> cynamon</label> 
                                 </div>
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek4C" name="dodatekC4" value=" - Cynamon">
-                                    <label for="dodatek4C"> lody</label>
+                                    <label for="dodatek4A"> lody</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="checkbox" id="dodatek5C" name="dodatekC5" value=" - Bita śmietana">
-                                    <label for="dodatek5C"> owoce leśne</label>
+                                    <label for="dodatek5A"> owoce leśne</label>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-2">
                             <button class="addToCart" id="CappuccinoButton" onclick="addToCart('dodatekC')"><img src="skins/shopping_cart.png" style="height:100%;" width="240px" alt="shopping_cart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2" style="margin-bottom:20px; background-color: #8B6642; border-radius: 50px; height: 235px; width: 235px; padding:0;"><img src="skins/latte.png" alt="Latte Macchiato" style="margin: 17.5px;" width="200px" height="200px"></div>
+                <div class="col-md-2 menu-text d-flex align-items-center" style="margin-bottom: 20px;">Latte Macchiato<br />25.80zł</div>
+                <div class="col-md-8" style="height: fit-content; background-color: #8B6642; border-radius: 20px; margin-bottom: 20px;">
+                    <div class="row">
+                        <div class="col-sm-10 menu-text">
+                            <div class="row"><div class="col-md-12">Dodatki:</div></div>
+                            <div class="row">
+                                <div class="col-md-6"> 
+                                    <input class="form-check-input" type="checkbox" id="dodatek1L" name="dodatekL1" value=" - Cukier">
+                                    <label for="dodatek1L"> cukier</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek2L" name="dodatekL2" value=" - Wanilia">
+                                    <label for="dodatek2L"> wanilia</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek3L" name="dodatekL3" value=" - Cynamon">
+                                    <label for="dodatek3L"> cynamon</label> 
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek4L" name="dodatekL4" value=" - Lody">
+                                    <label for="dodatek4L"> lody</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek5L" name="dodatekL5" value=" - Owoce leśne">
+                                    <label for="dodatek5L"> owoce leśne</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="addToCart" id="LatteButton" onclick="addToCart('dodatekL')"><img src="skins/shopping_cart.png" style="height:100%;" width="240px" alt="shopping_cart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2" style="margin-bottom:20px; background-color: #8B6642; border-radius: 50px; height: 235px; width: 235px; padding:0;"><img src="skins/espresso.png" alt="Espresso" style="margin: 17.5px;" width="200px" height="200px"></div>
+                <div class="col-md-2 menu-text d-flex align-items-center" style="margin-bottom: 20px;">Espresso<br />9.11zł</div>
+                <div class="col-md-8" style="height: fit-content; background-color: #8B6642; border-radius: 20px; margin-bottom: 20px;">
+                    <div class="row">
+                        <div class="col-sm-10 menu-text">
+                            <div class="row"><div class="col-md-12">Dodatki:</div></div>
+                            <div class="row">
+                                <div class="col-md-6"> 
+                                    <input class="form-check-input" type="checkbox" id="dodatek1E" name="dodatekE1" value=" - Cukier">
+                                    <label for="dodatek1E"> cukier</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="addToCart" id="EspressoButton" onclick="addToCart('dodatekE')"><img src="skins/shopping_cart.png" style="height:100%;" width="240px" alt="shopping_cart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2" style="margin-bottom:20px; background-color: #8B6642; border-radius: 50px; height: 235px; width: 235px; padding:0;"><img src="skins/Chocolate.png" alt="HotChoccy" style="margin: 17.5px;" width="200px" height="200px"></div>
+                <div class="col-md-2 menu-text d-flex align-items-center" style="margin-bottom: 20px;">Gorąca czekolada<br />9.11zł</div>
+                <div class="col-md-8" style="height: fit-content; background-color: #8B6642; border-radius: 20px; margin-bottom: 20px;">
+                    <div class="row">
+                        <div class="col-sm-10 menu-text">
+                            <div class="row"><div class="col-md-12">Dodatki:</div></div>
+                            <div class="row">
+                                <div class="col-md-6"> 
+                                    <input class="form-check-input" type="checkbox" id="dodatek1G" name="dodatekG1" value=" - Cukier">
+                                    <label for="dodatek1G"> cukier</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek2G" name="dodatekG2" value=" - Wanilia">
+                                    <label for="dodatek2G"> wanilia</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek3G" name="dodatekG3" value=" - Cynamon">
+                                    <label for="dodatek3G"> cynamon</label> 
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek4G" name="dodatekG4" value=" - Bita śmietana">
+                                    <label for="dodatek4G"> bita śmietana</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek5G" name="dodatekG5" value=" - Lody">
+                                    <label for="dodatek5G"> lody</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="dodatek6G" name="dodatekG6" value=" - Owoce leśne">
+                                    <label for="dodatek6G"> owoce leśne</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="addToCart" id="CzekoladaButton" onclick="addToCart('dodatekG')"><img src="skins/shopping_cart.png" style="height:100%;" width="240px" alt="shopping_cart">
                         </div>
                     </div>
                 </div>
@@ -212,7 +316,7 @@ function changeContentKoszyk() {
             </div>
             <div class="row">
                 <div class="col-md-2"></div>
-                <div class="col-md-8 smaller-box flex-column flex-sm-row d-flex align-items-center justify-content-center text-uppercase menu-text" style="padding: 0; background-color: #623500; border-radius: 10px; min-height: 101px; width: 515px; margin-top: 20px; font-size: 32px;">
+                <div class="col-md-8 smaller-box flex-column flex-sm-row d-flex align-items-center justify-content-center text-uppercase menu-text" style="padding: 0; background-color: #623500; border-radius: 10px; min-height: 101px; width: 515px; margin: 20px 0; font-size: 32px;">
                     <button class="btn pay-btn menu-text d-flex align-items-center justify-content-center" style="height: 100%; width: 100%;" onclick="kupuj()">Kupuję i płacę</button>
                 </div>
                 <div class="col-md-2">
@@ -225,6 +329,9 @@ attachEventListeners();
 var totalPrice = 0;
 var cappuccinoOrder = '';
 var americanoOrder = '';
+var latteOrder = '';
+var espressoOrder = '';
+var chocoOrder = '';
 
 function showCartContent() {
     const koszykContent = document.getElementById('koszykContent');
@@ -285,6 +392,30 @@ function addToCart(setName) {
         cappuccinoOrder += ` 13.37 zł <button class="btn btn-danger" onclick="removeFromCart(this)">Usuń</button>`; // Pass the button element
         koszyk.push(cappuccinoOrder);
         ceny.push(13.37);
+    } else if (kawa == 'dodatekL') {
+        var latteOrder = 'Latte Macchiato';
+        if (wybraneDodatki.length != 0) {
+            latteOrder += '<br> ' + wybraneDodatki.join('<br> ');
+        }
+        latteOrder += ` 25.80 zł <button class="btn btn-danger" onclick="removeFromCart(this)">Usuń</button>`; // Pass the button element
+        koszyk.push(latteOrder);
+        ceny.push(25.80);
+    } else if (kawa == 'dodatekE') {
+        var espressoOrder = 'Espresso';
+        if (wybraneDodatki.length != 0) {
+            espressoOrder += '<br> ' + wybraneDodatki.join('<br> ');
+        }
+        espressoOrder += ` 9.11 zł <button class="btn btn-danger" onclick="removeFromCart(this)">Usuń</button>`; // Pass the button element
+        koszyk.push(espressoOrder);
+        ceny.push(9.11);
+    } else if (kawa == 'dodatekG') {
+        var chocoOrder = 'Gorąca czekolada';
+        if (wybraneDodatki.length != 0) {
+            chocoOrder += '<br> ' + wybraneDodatki.join('<br> ');
+        }
+        chocoOrder += ` 9.11 zł <button class="btn btn-danger" onclick="removeFromCart(this)">Usuń</button>`; // Pass the button element
+        koszyk.push(chocoOrder);
+        ceny.push(9.11);
     }
     showPopup();
 }
