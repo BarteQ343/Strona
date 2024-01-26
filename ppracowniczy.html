@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cafe NEGRAR</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body onload="showOrders()">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="padding: 0;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <img id="image1" src="skins/customer_service_2.png" alt="Coworking">Nasze usługi
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="coworking.html">
+                            <img id="image2" src="skins/coworking_2.png" alt="Coworking">Przestrzeń coworkingowa
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">
+                            <img id="image3" src="skins/menu_2.png" alt="Menu">Kawa i Menu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="login.html">
+                            <img id="image4" src="skins/login_1.png" alt="Login">Zaloguj się
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="nav nav-pills flex-column flex-sm-row justify-content-center" style="padding: 0;">
+                    <li class="nav-item">
+                        <button class="flex-sm-fill text-sm-center nav-link pprac">Panel pracowniczy</button>
+                    </li>
+                </ul>
+            </div>
+                <div class="row">
+                    <div class="col-md-12" id="zamowieniaContent">
+                        <div class="row" style="margin-bottom: 10px;">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8 menu-text" style="background-color: #8B6642; border-radius: 20px; height: max-content; padding: 10px 12px;">
+                                <div class="row" style="padding-right: 10px;">
+                                    <div class="col-md-9">
+                                        <p style="font-size: 30px;">Zamównie #1</p>
+                                        <hr>
+                                        Ciastko <br>
+                                        Americano<br>
+                                        - Mleko<br>
+                                        - Cukier<br>
+                                    </div>
+                                    <div class="col-md-3" style="background-color: #CD995C; border-radius: 20px; padding-right: 5px; text-align: center; height: 25%;">
+                                        Status:<br>
+                                        W trakcie
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn pay-btn menu-text" style="margin-bottom: 5px; font-size: 30px;">W trakcie</button>
+                                <button class="btn pay-btn menu-text" style="margin-bottom: 5px; font-size: 30px;">Gotowe do odebrania</button>
+                                <button class="btn pay-btn menu-text" style="margin-bottom: 5px; font-size: 30px;">Odebrane</button>
+                            </div>
+                        </div>
+                        <div class="row" style=" margin-bottom: 10px;">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8 menu-text" style="background-color: #8B6642; border-radius: 20px; height: max-content; padding: 10px 12px;">
+                                <div class="row" style="padding-right: 10px;">
+                                    <div class="col-md-9">
+                                        <p style="font-size: 30px;">Zamównie #1</p>
+                                        <hr>
+                                        Ciastko <br>
+                                        Americano<br>
+                                        - Mleko<br>
+                                        - Cukier<br>
+                                    </div>
+                                    <div class="col-md-3" style="background-color: #CD995C; border-radius: 20px; padding-right: 5px; text-align: center; height: 25%;">
+                                        Status:<br>
+                                        Czeka na odbiór
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn pay-btn menu-text" style="margin-bottom: 5px; font-size: 30px;">W trakcie</button>
+                                <button class="btn pay-btn menu-text" style="margin-bottom: 5px; font-size: 30px;">Gotowe do odebrania</button>
+                                <button class="btn pay-btn menu-text" style="margin-bottom: 5px; font-size: 30px;">Odebrane</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="bd-footer bg-dark text-white py-4" style="position: absolute; bottom: 0; margin:0; width: 100%;">
+            <div class="container text-center">
+                <p>To jest mock-up. Do pełnego działania potrzebny byłby serwer z bazą danych i obsługą tej bazy</p>
+            </div>
+        </footer>
+        <script src="panel_script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
