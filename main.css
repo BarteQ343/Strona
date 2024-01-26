@@ -158,6 +158,10 @@ body {
     background-color: white;
 }
 
+.btn.pay-btn {
+    background-color: #623500;
+}
+
 .menu-text {
     text-align: left;
     color: white;
@@ -213,6 +217,27 @@ body {
     display: block; /* Ensure the popup is visible during the transition */
 }
 
+.pprac {
+    color: white;
+    background-color: #623500;
+    height: 80px;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 14px;
+    margin-left:14px;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.pprac:hover {
+    color: white;
+    cursor: default;
+}
+
+.pprac:focus {
+    color: white;
+}
+
 /*--------------------
 Strona Logowania
 --------------------*/
@@ -250,7 +275,6 @@ Login
     
     fieldset::after {
       content: '\f007';
-      font-family: FontAwesome;
       position: absolute;
       right: 15px;
       top: 17px;
@@ -304,9 +328,9 @@ login-form
     width: 60%;
     height: 30%;
     font-size: 22px;
-    color: beige;
+    color: white;
     outline: none!important;
-    background: linear-gradient(-5deg, hsl(32, 100%, 19%), hsl(42, 100%, 19%));
+    background: #623500;
     border: none;
     text-transform: uppercase;
     font-weight: bold;
@@ -314,8 +338,9 @@ login-form
     text-shadow: 0 2px 3px hsla(0, 0, 0, 0.2);
   }
   button:hover{
-    background: linear-gradient(-5deg, hsl(70, 5%, 85%), hsl(60, 6%, 93%));
-    transition: 200ms;
+    background: white;
+    color: black;
+    transition: 300ms;
   }
   
 }
@@ -323,9 +348,10 @@ login-form
   .warning {
     color: red;
     margin-top: 10px;
-    background: beige;
+    background: white;
     border-radius: 5px;
-    width: 47%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 700;
 }

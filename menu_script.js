@@ -77,27 +77,27 @@ function changeContentKawa() {
                             <div class="row"><div class="col-md-12">Dodatki:</div></div>
                             <div class="row">
                                 <div class="col-md-6"> 
-                                    <input class="form-check-input" type="checkbox" id="dodatek1C" name="dodatekC1" value=" - Mleko">
+                                    <input class="form-check-input" type="checkbox" id="dodatek1C" name="dodatekC1" value=" - Cukier">
                                     <label for="dodatek1A"> cukier</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <input class="form-check-input" type="checkbox" id="dodatek2C" name="dodatekC2" value=" - Cukier">
+                                    <input class="form-check-input" type="checkbox" id="dodatek2C" name="dodatekC2" value=" - Wanilia">
                                     <label for="dodatek2A"> wanilia</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input class="form-check-input" type="checkbox" id="dodatek3C" name="dodatekC3" value=" - Wanilia">
+                                    <input class="form-check-input" type="checkbox" id="dodatek3C" name="dodatekC3" value=" - Cynamon">
                                     <label for="dodatek3A"> cynamon</label> 
                                 </div>
                                 <div class="col-md-6">
-                                    <input class="form-check-input" type="checkbox" id="dodatek4C" name="dodatekC4" value=" - Cynamon">
+                                    <input class="form-check-input" type="checkbox" id="dodatek4C" name="dodatekC4" value=" - Lody">
                                     <label for="dodatek4A"> lody</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input class="form-check-input" type="checkbox" id="dodatek5C" name="dodatekC5" value=" - Bita śmietana">
+                                    <input class="form-check-input" type="checkbox" id="dodatek5C" name="dodatekC5" value=" - Owoce leśne">
                                     <label for="dodatek5A"> owoce leśne</label>
                                 </div>
                             </div>
@@ -379,7 +379,7 @@ function addToCart(setName) {
     if (kawa == 'dodatekA') {
         var americanoOrder = 'Americano';
         if (wybraneDodatki.length != 0) {
-            americanoOrder += '<br> ' + wybraneDodatki.join('<br> ');
+            americanoOrder += ' <br> ' + wybraneDodatki.join('<br> ');
         }
         americanoOrder += ` 21.37 zł <button class="btn btn-danger" onclick="removeFromCart(this)">Usuń</button>`; // Pass the button element
         koszyk.push(americanoOrder);
@@ -387,7 +387,7 @@ function addToCart(setName) {
     } else if (kawa == 'dodatekC') {
         var cappuccinoOrder = 'Cappuccino';
         if (wybraneDodatki.length != 0) {
-            cappuccinoOrder += '<br> ' + wybraneDodatki.join('<br> ');
+            cappuccinoOrder += ' <br> ' + wybraneDodatki.join('<br> ');
         }
         cappuccinoOrder += ` 13.37 zł <button class="btn btn-danger" onclick="removeFromCart(this)">Usuń</button>`; // Pass the button element
         koszyk.push(cappuccinoOrder);
@@ -395,7 +395,7 @@ function addToCart(setName) {
     } else if (kawa == 'dodatekL') {
         var latteOrder = 'Latte Macchiato';
         if (wybraneDodatki.length != 0) {
-            latteOrder += '<br> ' + wybraneDodatki.join('<br> ');
+            latteOrder += ' <br> ' + wybraneDodatki.join('<br> ');
         }
         latteOrder += ` 25.80 zł <button class="btn btn-danger" onclick="removeFromCart(this)">Usuń</button>`; // Pass the button element
         koszyk.push(latteOrder);
@@ -403,7 +403,7 @@ function addToCart(setName) {
     } else if (kawa == 'dodatekE') {
         var espressoOrder = 'Espresso';
         if (wybraneDodatki.length != 0) {
-            espressoOrder += '<br> ' + wybraneDodatki.join('<br> ');
+            espressoOrder += ' <br> ' + wybraneDodatki.join('<br> ');
         }
         espressoOrder += ` 9.11 zł <button class="btn btn-danger" onclick="removeFromCart(this)">Usuń</button>`; // Pass the button element
         koszyk.push(espressoOrder);
@@ -411,7 +411,7 @@ function addToCart(setName) {
     } else if (kawa == 'dodatekG') {
         var chocoOrder = 'Gorąca czekolada';
         if (wybraneDodatki.length != 0) {
-            chocoOrder += '<br> ' + wybraneDodatki.join('<br> ');
+            chocoOrder += ' <br> ' + wybraneDodatki.join('<br> ');
         }
         chocoOrder += ` 9.11 zł <button class="btn btn-danger" onclick="removeFromCart(this)">Usuń</button>`; // Pass the button element
         koszyk.push(chocoOrder);

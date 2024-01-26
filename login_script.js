@@ -14,8 +14,7 @@ function loginFunction(event) {
 
   if (enteredUsername === hardcodedUsername && enteredPassword === hardcodedPassword) {
     warningMessage.innerText = ""; // Clear any previous warning
-    alert("Login successful!");
-    
+    window.location.href = "ppracowniczy.html";
   }
   else {
     warningMessage.innerText = "Nieprawidłowe dane logowania.";
