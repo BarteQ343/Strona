@@ -38,6 +38,21 @@
                 </ul>
             </div>
         </nav>
+
+        <div class="login">
+            <form class="login-form" onsubmit="loginFunction(event)">
+              <fieldset class="email">
+                <input type="username" id="emailInput" placeholder="Email" required />
+              </fieldset>
+              <fieldset class="password">
+                <input type="password" id="passwordInput" placeholder="Hasło" required />
+              </fieldset>
+              <button type="submit" class="btn">Zaloguj się</button>
+              <p class="warning" id="warningMessage"></p>
+            </form>
+        </div>
+        
+        <script src="login_script.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
